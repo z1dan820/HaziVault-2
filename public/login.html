@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HaziVault Login</title>
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body class="center">
+  <div class="card">
+    <h2>HaziVault</h2>
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="err"></p>
+  </div>
+
+<script>
+async function login(){
+  const r = await fetch("/api/auth/login",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      username:user.value,
+      password:pass.value
+    })
+  })
+  const j = await r.json()
+  if(j.token){
+    localStorage.token = j.token
+    location.href="/"
+  }else{
+    err.innerText = j.error || "Login gagal"
+  }
+}
+</script>
+</body>
+</html>
