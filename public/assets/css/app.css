@@ -1,0 +1,14 @@
+*{box-sizing:border-box;font-family:system-ui}
+body{margin:0;background:#0b1220;color:#e5e7eb}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px;background:#111827}
+h1{margin:0;font-size:18px}
+button{padding:8px 12px;border:0;border-radius:10px;background:#22c55e;color:#000}
+input{padding:8px;width:100%;margin:6px 0;border-radius:10px;border:0}
+.card{background:#111827;padding:16px;border-radius:14px}
+.center{display:flex;justify-content:center;align-items:center;height:100vh}
+main{padding:12px}
+ul{list-style:none;padding:0}
+li{padding:10px;border-bottom:1px solid #1f2937}
+.toolbar{display:flex;gap:8px;margin-bottom:10px}
+.modal{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center}
+.hidden{display:none}
