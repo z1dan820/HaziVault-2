@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HaziVault</title>
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+<header>
+  <h1>HaziVault</h1>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div id="storageWizard" class="modal hidden">
+  <div class="card">
+    <h3>Pilih Storage</h3>
+    <ul id="storageList"></ul>
+  </div>
+</div>
+
+<main>
+  <div class="toolbar">
+    <input type="file" id="file" multiple>
+    <button onclick="upload()">Upload</button>
+  </div>
+  <ul id="files"></ul>
+</main>
+
+<script src="/assets/js/app.js"></script>
+</body>
+</html>
