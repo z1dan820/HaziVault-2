@@ -12,3 +12,11 @@ li{padding:10px;border-bottom:1px solid #1f2937}
 .toolbar{display:flex;gap:8px;margin-bottom:10px}
 .modal{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center}
 .hidden{display:none}
+#previewContent img,
+#previewContent video,
+#previewContent iframe,
+#previewContent audio{
+  max-width:100%;
+  max-height:70vh;
+  border-radius:12px;
+}
